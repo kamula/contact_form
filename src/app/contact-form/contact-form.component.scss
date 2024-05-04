@@ -1,0 +1,33 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: auto;
+    width: 100%; // Ensures that the container takes up 100% of the width
+    max-width: 600px;
+    box-sizing: border-box; // Ensures padding does not add to the width
+  }
+  
+  .contact-form {
+    width: 100%; // Ensures form uses all available width
+    box-sizing: border-box; // Prevents padding from expanding width
+  }
+  
+  mat-form-field {
+    width: 100%; // Full width to prevent overflow
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%; // Full width for the button
+  }
+  
+  textarea {
+    min-width: 100%; // Ensures that the textarea does not exceed its container
+    max-width: 100%; // Prevents the textarea from causing overflow
+  }
+  
