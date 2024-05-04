@@ -10,6 +10,7 @@ import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-contact-form',
@@ -35,12 +36,12 @@ export class ContactFormComponent {
     message: new FormControl('', [Validators.required]),
   });
 
-  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
 
   onSubmit() {
     if (this.contactForm.valid) {
       this.isLoading = true;
-      this.http.post('http://localhost:8000/api/contact', this.contactForm.value)
+      this.http.post(`${environment.apiUrl}/api/contact`, this.contactForm.value)
         .pipe(
           catchError(error => {
             this.snackBar.open('Failed to submit form: ' + error.message, 'Close', { duration: 3000 });
