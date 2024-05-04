@@ -43,9 +43,21 @@ ng serve
 
 Navigate to `http://localhost:4200/` in your web browser. The application will automatically reload if you change any of the source files.
 
-## Code Scaffolding
+## Configuring API Endpoint
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+If your backend service is running on a different port or host, make sure to update the `apiUrl` in the `environments/environment.ts` and `environments/environment.prod.ts` files accordingly to ensure the frontend can communicate with the backend effectively.
+
+## Form Validation and User Feedback
+
+The contact form uses Angular's reactive form approach for validation:
+- **Required Fields**: Each field (Full Name, Email, Message) is marked as required.
+- **Email Validation**: The email field is validated for standard email format.
+- **Visual Feedback**: Angular Material inputs display validation errors to the user as they interact with the form.
+
+### Loading State and Response Alerts
+
+- **Loading Indicator**: Upon submission, a loading spinner indicates that the form is processing.
+- **Success and Error Handling**: On successful form submission, a confirmation message is displayed. If an error occurs, a snack bar shows an error message detailing the failure.
 
 ## Build
 
@@ -72,3 +84,7 @@ Execute the end-to-end tests by running:
 ```bash
 ng e2e
 ```
+
+## Additional Information
+
+For further details on configuring the application or deploying it to a live server, refer to the official [Angular CLI documentation](https://angular.io/cli).
