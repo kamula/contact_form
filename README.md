@@ -1,4 +1,4 @@
-# ContactFormAppComponent
+# Contact Form FrontEnd Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6. It utilizes Angular Material for UI components.
 
@@ -10,6 +10,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Before you begin, ensure you have the latest version of [Node.js](https://nodejs.org/) installed which includes npm (Node Package Manager). This will be used to run the development server and install dependencies.
 
+### Backend Service
+
+Make sure the backend service is already running before you start this application. The frontend relies on the backend for all data management tasks. You can find the backend repository and setup instructions here: [Backend Repository](https://github.com/kamula/contact_form_backend.git)
+
 ## Cloning the Repository
 
 To get started with this project, you first need to clone the repository to your local machine. You can do this by running the following command in your terminal:
@@ -19,10 +23,9 @@ git clone https://github.com/kamula/contact_form.git
 cd contact_form
 ```
 
-
 ## Installation
 
-After cloning the repository, you need to install the dependencies. Navigate to the project directory and run:
+After cloning the repository, navigate to the project directory and install the dependencies:
 
 ```bash
 npm install
