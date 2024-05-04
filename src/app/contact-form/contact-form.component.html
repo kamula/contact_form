@@ -16,10 +16,13 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Message</mat-label>
-            <textarea matInput formControlName="message" required  rows="4"></textarea>
+            <textarea matInput formControlName="message" required rows="4"></textarea>
             <mat-error *ngIf="contactForm.get('message')?.hasError('required')">Message is required</mat-error>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">Submit</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="isLoading || !contactForm.valid">
+            <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+            {{ isLoading ? 'Submitting...' : 'Submit' }}
+        </button>
     </form>
 </div>
